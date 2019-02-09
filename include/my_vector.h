@@ -8,7 +8,6 @@
 #ifndef MY_VECTOR_H_
 #define MY_VECTOR_H_
 
-#include "my.h"
 #include "my_chained.h"
 
 struct simple_vector {
