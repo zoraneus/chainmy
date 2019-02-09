@@ -26,7 +26,7 @@ LIGHT_MAGEN	=	"\e[95m"
 LIGHT_CYAN	=	"\e[96m"
 LINE_RETURN	=	$(ECHO) ""
 
-NAME	=	dispmy
+NAME	=	chainmy
 COLOR_THEME	=	$(MAGEN_C)
 MY_PATH	=	.
 INCLUDE_PATH	=	../include
