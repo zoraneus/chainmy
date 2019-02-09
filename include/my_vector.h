@@ -23,7 +23,4 @@ void simple_vector_push_back(simple_vector_t *vect, void *content);
 void simple_vector_pop_top(simple_vector_t *vect);
 void simple_vector_pop_back(simple_vector_t *vect);
 
-//  debug show str functions  //
-void d_simple_vector_show(simple_vector_t *vect);
-
 #endif /* !MY_VECTOR_H_ */
