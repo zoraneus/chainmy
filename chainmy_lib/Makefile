@@ -32,6 +32,7 @@ MY_PATH	=	.
 INCLUDE_PATH	=	../include
 
 SRC_MY	=	my_chained/double_chain_push.c \
+			my_chained/double_chain_pop.c \
 			my_chained/simple_chain.c \
 			my_vector/my_simple_vector.c
 
