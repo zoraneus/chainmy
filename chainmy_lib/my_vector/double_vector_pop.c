@@ -23,3 +23,13 @@ void double_vector_pop_me(double_vector_t *vect, double_chained_t *node)
     double_chain_pop_me(node);
     vect->size--;
 }
+
+void double_vector_pop_back(double_vector_t *vect)
+{
+    double_vector_pop_me(vect, vect->end);
+}
+
+void double_vector_pop_top(double_vector_t *vect)
+{
+    double_vector_pop_me(vect, vect->start);
+}

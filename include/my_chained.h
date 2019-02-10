@@ -39,6 +39,7 @@ void double_chain_push_after(double_chained_t *link, void *content);
 void double_chain_push_before(double_chained_t *link, void *content);
 void double_chain_pop_me(double_chained_t *link);
 void double_chain_pop_back(double_chained_t *link);
+void double_chain_pop_top(double_cahined_t *link);
 
 //debug
 void double_chain_debug_desc(double_chained_t *link);
