@@ -29,6 +29,7 @@ void simple_chain_push_after(simple_chained_t *link, void *content)
 {
     simple_chained_t *new = simple_chain_create(content);
 
+    new->next = link->next;
     link->next = new;
 }
 
