@@ -75,8 +75,6 @@ void double_chain_debug_asc(double_chained_t *link)
 {
     double_chained_t *current = link;
 
-    while (current->next != 0)
-        current = current->next;
     while (current != 0) {
         printf("%s\n", (char*)current->content);
         current = current->prev;
