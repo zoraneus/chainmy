@@ -30,7 +30,7 @@ struct double_vector {
 };
 typedef struct double_vector double_vector_t;
 
-double_vector_t *double_vector_create();
+double_vector_t *double_vector_create(void);
 void double_vector_push_back(double_vector_t *vect, void *content);
 void double_vector_push_top(double_vector_t *vect, void *content);
 void double_vector_pop_me(double_vector_t *vect, double_chained_t *node);

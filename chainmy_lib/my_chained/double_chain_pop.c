@@ -21,6 +21,6 @@ void double_chain_pop_back(double_chained_t *link)
     double_chained_t *current = link;
 
     while (current->next != 0)
-        current = current->next; 
+        current = current->next;
     double_chain_pop_me(current);
 }

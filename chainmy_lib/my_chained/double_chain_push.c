@@ -44,7 +44,7 @@ void double_chain_push_after(double_chained_t *link, void *content)
 
     if (link->next != 0)
         link->next->prev = new;
-    new->prev = link; 
+    new->prev = link;
     new->next = link->next;
     link->next = new;
 }
@@ -58,25 +58,4 @@ void double_chain_push_before(double_chained_t *link, void *content)
     new->prev = link->prev;
     new->next = link;
     link->prev = new;
-}
-
-void double_chain_debug_desc(double_chained_t *link)
-{
-    double_chained_t *current = link;
-
-    while (current->next != 0) {
-        printf("%s\n", (char*)current->content);
-        current = current->next;
-    }
-    printf("%s\n", (char*)current->content);
-}
-
-void double_chain_debug_asc(double_chained_t *link)
-{
-    double_chained_t *current = link;
-
-    while (current != 0) {
-        printf("%s\n", (char*)current->content);
-        current = current->prev;
-    }
 }
