@@ -9,20 +9,6 @@
 #define MY_CHAINED_H_
 
 #include "stdlib.h"
-#include <stdio.h>
-
-//  simple chained list  //
-struct simple_chained {
-    struct simple_chained *next;
-    void *content;
-};
-typedef struct simple_chained simple_chained_t;
-
-simple_chained_t *simple_chain_create(void *content);
-void simple_chain_push_back(simple_chained_t *link, void *content);
-void simple_chain_push_top(simple_chained_t **link, void *content);
-void simple_chain_push_after(simple_chained_t *link, void *content);
-void simple_chain_pop_after(simple_chained_t *link);
 
 // double chained  //
 struct double_chained {

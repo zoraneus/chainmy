@@ -11,6 +11,8 @@ double_chained_t *double_chain_create(void *content)
 {
     double_chained_t *link = malloc(sizeof(double_chained_t));
 
+    if (!link)
+        return (NULL);
     link->content = content;
     link->prev = 0;
     link->next = 0;
@@ -22,6 +24,8 @@ void double_chain_push_back(double_chained_t *link, void *content)
     double_chained_t *current = link;
     double_chained_t *new = double_chain_create(content);
 
+    if (!new)
+        return;
     while (current->next != 0)
         current = current->next;
     current->next = new;
@@ -42,6 +46,8 @@ void double_chain_push_after(double_chained_t *link, void *content)
 {
     double_chained_t *new = double_chain_create(content);
 
+    if (!new)
+        return (NULL);
     if (link->next != 0)
         link->next->prev = new;
     new->prev = link;
@@ -53,6 +59,8 @@ void double_chain_push_before(double_chained_t *link, void *content)
 {
     double_chained_t *new = double_chain_create(content);
 
+    if (!new)
+        return (NULL);
     if (link->prev != 0)
         link->prev->next = new;
     new->prev = link->prev;

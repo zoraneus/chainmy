@@ -11,6 +11,8 @@ double_vector_t *double_vector_create(void)
 {
     double_vector_t *new = malloc(sizeof(double_vector_t));
 
+    if (!new)
+        return (NULL);
     new->size = 0;
     new->start = 0;
     new->end = 0;
@@ -23,6 +25,8 @@ void double_vector_push_back(double_vector_t *vect, void *content)
 
     if (vect->start == 0) {
         to_insert = double_chain_create(content);
+        if (!to_insert)
+            return;
         vect->size++;
         vect->start = to_insert;
         vect->end = to_insert;
