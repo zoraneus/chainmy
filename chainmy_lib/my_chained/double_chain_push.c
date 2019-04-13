@@ -47,7 +47,7 @@ void double_chain_push_after(double_chained_t *link, void *content)
     double_chained_t *new = double_chain_create(content);
 
     if (!new)
-        return (NULL);
+        return;
     if (link->next != 0)
         link->next->prev = new;
     new->prev = link;
@@ -60,7 +60,7 @@ void double_chain_push_before(double_chained_t *link, void *content)
     double_chained_t *new = double_chain_create(content);
 
     if (!new)
-        return (NULL);
+        return;
     if (link->prev != 0)
         link->prev->next = new;
     new->prev = link->prev;
