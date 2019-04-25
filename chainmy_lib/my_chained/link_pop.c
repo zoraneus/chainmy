@@ -2,12 +2,12 @@
 ** EPITECH PROJECT, 2019
 ** chainmy
 ** File description:
-** double_chain_pop
+** link_pop
 */
 
-#include "my_chained.h"
+#include "my_link.h"
 
-void double_chain_pop_me(double_chained_t *link)
+void link_pop_me(link_t *link)
 {
     if (link->prev != 0)
         link->prev->next = link->next;
@@ -16,11 +16,11 @@ void double_chain_pop_me(double_chained_t *link)
     free(link);
 }
 
-void double_chain_pop_back(double_chained_t *link)
+void link_pop_back(link_t *link)
 {
-    double_chained_t *current = link;
+    link_t *current = link;
 
     while (current->next != 0)
         current = current->next;
-    double_chain_pop_me(current);
+    link_pop_me(current);
 }

@@ -8,20 +8,20 @@
 #ifndef MY_VECTOR_H_
 #define MY_VECTOR_H_
 
-#include "my_chained.h"
+#include "my_link.h"
 
-struct double_vector {
-    double_chained_t *start;
-    double_chained_t *end;
+struct vector {
+    link_t *start;
+    link_t *end;
     int size;
 };
-typedef struct double_vector double_vector_t;
+typedef struct vector vector_t;
 
-double_vector_t *double_vector_create(void);
-void double_vector_push_back(double_vector_t *vect, void *content);
-void double_vector_push_top(double_vector_t *vect, void *content);
-void double_vector_pop_me(double_vector_t *vect, double_chained_t *node);
-void double_vector_pop_back(double_vector_t *vect);
-void double_vector_pop_top(double_vector_t *vect);
+vector_t *vector_create(void);
+void vector_push_back(vector_t *vect, void *content);
+void vector_push_top(vector_t *vect, void *content);
+void vector_pop_me(vector_t *vect, link_t *node);
+void vector_pop_back(vector_t *vect);
+void vector_pop_top(vector_t *vect);
 
 #endif /* !MY_VECTOR_H_ */

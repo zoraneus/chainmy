@@ -32,10 +32,10 @@ DEBUG_THEME =	$(CYAN_C)
 SRC_PATH	=	./
 INCLUDE_PATH	=	../include
 
-SRC		=	my_chained/double_chain_push.c \
-			my_chained/double_chain_pop.c \
-			my_vector/double_vector_push.c \
-			my_vector/double_vector_pop.c
+SRC		=	my_chained/link_push.c \
+			my_chained/link_pop.c \
+			my_vector/vector_push.c \
+			my_vector/vector_pop.c
 
 CFLAGS	=	-Wall \
 			-Wextra \

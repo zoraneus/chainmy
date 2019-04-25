@@ -2,14 +2,14 @@
 ** EPITECH PROJECT, 2019
 ** libmy
 ** File description:
-** double_chain
+** link
 */
 
-#include "my_chained.h"
+#include "my_link.h"
 
-double_chained_t *double_chain_create(void *content)
+link_t *link_create(void *content)
 {
-    double_chained_t *link = malloc(sizeof(double_chained_t));
+    link_t *link = malloc(sizeof(link_t));
 
     if (!link)
         return (NULL);
@@ -19,10 +19,10 @@ double_chained_t *double_chain_create(void *content)
     return (link);
 }
 
-void double_chain_push_back(double_chained_t *link, void *content)
+void link_push_back(link_t *link, void *content)
 {
-    double_chained_t *current = link;
-    double_chained_t *new = double_chain_create(content);
+    link_t *current = link;
+    link_t *new = link_create(content);
 
     if (!new)
         return;
@@ -32,19 +32,19 @@ void double_chain_push_back(double_chained_t *link, void *content)
     new->prev = current;
 }
 
-void double_chain_push_top(double_chained_t **link, void *content)
+void link_push_top(link_t **link, void *content)
 {
-    double_chained_t *node = *link;
+    link_t *node = *link;
 
     while (node->prev != 0)
         node = node->prev;
-    double_chain_push_before(node, content);
+    link_push_before(node, content);
     *link = node->prev;
 }
 
-void double_chain_push_after(double_chained_t *link, void *content)
+void link_push_after(link_t *link, void *content)
 {
-    double_chained_t *new = double_chain_create(content);
+    link_t *new = link_create(content);
 
     if (!new)
         return;
@@ -55,9 +55,9 @@ void double_chain_push_after(double_chained_t *link, void *content)
     link->next = new;
 }
 
-void double_chain_push_before(double_chained_t *link, void *content)
+void link_push_before(link_t *link, void *content)
 {
-    double_chained_t *new = double_chain_create(content);
+    link_t *new = link_create(content);
 
     if (!new)
         return;

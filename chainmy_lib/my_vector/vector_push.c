@@ -2,14 +2,14 @@
 ** EPITECH PROJECT, 2019
 ** chainmy
 ** File description:
-** double_vector
+** vector
 */
 
 #include "my_vector.h"
 
-double_vector_t *double_vector_create(void)
+vector_t *vector_create(void)
 {
-    double_vector_t *new = malloc(sizeof(double_vector_t));
+    vector_t *new = malloc(sizeof(vector_t));
 
     if (!new)
         return (NULL);
@@ -19,12 +19,12 @@ double_vector_t *double_vector_create(void)
     return (new);
 }
 
-void double_vector_push_back(double_vector_t *vect, void *content)
+void vector_push_back(vector_t *vect, void *content)
 {
-    double_chained_t *to_insert;
+    link_t *to_insert;
 
     if (vect->start == 0) {
-        to_insert = double_chain_create(content);
+        to_insert = link_create(content);
         if (!to_insert)
             return;
         vect->size++;
@@ -32,18 +32,18 @@ void double_vector_push_back(double_vector_t *vect, void *content)
         vect->end = to_insert;
         return;
     }
-    double_chain_push_after(vect->end, content);
+    link_push_after(vect->end, content);
     vect->end = vect->end->next;
     vect->size++;
 }
 
-void double_vector_push_top(double_vector_t *vect, void *content)
+void vector_push_top(vector_t *vect, void *content)
 {
     if (vect->start == 0) {
-        double_vector_push_back(vect, content);
+        vector_push_back(vect, content);
         return;
     }
-    double_chain_push_before(vect->start, content);
+    link_push_before(vect->start, content);
     vect->start = vect->start->prev;
     vect->size++;
 }
