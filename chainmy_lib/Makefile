@@ -31,11 +31,13 @@ COLOR_THEME		=	$(YELLO_C)
 DEBUG_THEME     =	$(CYAN_C)
 INCLUDE_PATH	=	../include
 
-SRC		=	my_chained/link_push.c \
-			my_chained/link_pop.c \
-			my_vector/vector_push.c \
-			my_vector/vector_pop.c
-TEST_SRC	=	
+SRC			=	my_chained/link_push.c \
+				my_chained/link_pop.c \
+				my_vector/vector_push.c \
+				my_vector/vector_pop.c
+TEST_SRC	=	tests/test_link_create.c \
+				tests/test_link_push_after.c \
+				tests/test_link_push_before.c
 
 CFLAGS		=	-Wall \
 				-Wextra \
