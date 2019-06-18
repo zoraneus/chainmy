@@ -15,12 +15,3 @@ void link_pop_me(link_t *link)
         link->next->prev = link->prev;
     free(link);
 }
-
-void link_pop_back(link_t *link)
-{
-    link_t *current = link;
-
-    while (current->next != 0)
-        current = current->next;
-    link_pop_me(current);
-}

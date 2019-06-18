@@ -37,7 +37,12 @@ SRC			=	my_chained/link_push.c \
 				my_vector/vector_pop.c
 TEST_SRC	=	tests/test_link_create.c \
 				tests/test_link_push_after.c \
-				tests/test_link_push_before.c
+				tests/test_link_push_before.c \
+				tests/test_link_pop_me.c \
+				tests/test_vector_create.c \
+				tests/test_vector_push_back.c \
+				tests/test_vector_push_top.c \
+				tests/test_vector_pop_me.c
 
 CFLAGS		=	-Wall \
 				-Wextra \

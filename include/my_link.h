@@ -43,14 +43,4 @@ destroy the node (link) and plumb in his prev and next
 (no free of content) */
 void link_pop_me(link_t *link);
 
-/* link_pop.c:
-destroy the node at the end of list and plumb in his prev and next
-(no free content)*/
-void link_pop_back(link_t *link);
-
-/* link_pop.c:
-destroy the node at the top of list and plumb in his prev and next
-(no free content) */
-void link_pop_top(link_t *link);
-
 #endif /* !MY_CHAINED_H_ */
